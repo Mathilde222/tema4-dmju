@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dansk Model Jernbane Union</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300;400;500;700&amp;display=swap">
+    <link rel="stylesheet" href="css/julie.css">
+    <script src="js/julie.js" defer></script>
+</head>
+<body id="forside">
+<header class="site-header">
+    <div class="header-inner">
+        <a class="logo" href="julie.html" aria-label="DMJU – forsiden">
+            <img src="assets/julie/dmju-logo.png" alt="DMJU">
+        </a>
+        <button class="mobile-toggle" type="button" aria-expanded="false" aria-controls="hovedmenu">Menu</button>
+        <nav id="hovedmenu" aria-label="Hovedmenu">
+            <ul class="main-menu">
+                <li>
+                    <button type="button" aria-expanded="false" aria-controls="menu-velkommen">Velkommen</button>
+                    <ul id="menu-velkommen" hidden>
+                        <li><a href="#medlem">Bliv medlem</a></li>
+                        <li><span class="menu-placeholder" aria-disabled="true">Find en klub</span></li>
+                        <li><span class="menu-placeholder" aria-disabled="true">Kluboversigt</span></li>
+                    </ul>
+                </li>
+                <li>
+                    <button type="button" aria-expanded="false" aria-controls="menu-om">DMJU</button>
+                    <ul id="menu-om" hidden>
+                        <li><a href="#om-foreningen">Om foreningen</a></li>
+                        <li><span class="menu-placeholder" aria-disabled="true">Bestyrelse og kontakt</span></li>
+                        <li><span class="menu-placeholder" aria-disabled="true">Vedtægter og referater</span></li>
+                    </ul>
+                </li>
+                <li>
+                    <button type="button" aria-expanded="false" aria-controls="menu-udstillinger">Udstillinger</button>
+                    <ul id="menu-udstillinger" hidden>
+                        <li><a href="#kommende-udstillinger">Kommende udstillinger</a></li>
+                        <li><span class="menu-placeholder" aria-disabled="true">Tidligere udstillinger</span></li>
+                        <li><span class="menu-placeholder" aria-disabled="true">Modeljernbanens Dag</span></li>
+                    </ul>
+                </li>
+                <li>
+                    <button type="button" aria-expanded="false" aria-controls="menu-aktiviteter">Aktiviteter</button>
+                    <ul id="menu-aktiviteter" hidden>
+                        <li><a href="#fotokonkurrence">Fotokonkurrence</a></li>
+                        <li><span class="menu-placeholder" aria-disabled="true">Årets Model</span></li>
+                        <li><span class="menu-placeholder" aria-disabled="true">Årets Krus</span></li>
+                    </ul>
+                </li>
+                <li>
+                    <button type="button" aria-expanded="false" aria-controls="menu-nyheder">Nyheder</button>
+                    <ul id="menu-nyheder" hidden>
+                        <li><a href="#nyheder">DMJU</a></li>
+                        <li><span class="menu-placeholder" aria-disabled="true">Seneste nyheder</span></li>
+                    </ul>
+                </li>
+                <li>
+                    <button type="button" aria-expanded="false" aria-controls="menu-hjaelp">Hjælp &amp; viden</button>
+                    <ul id="menu-hjaelp" hidden>
+                        <li><a href="#hjaelpevognen">Hjælpevognen</a></li>
+                        <li><span class="menu-placeholder" aria-disabled="true">Sporstørrelser og standarder</span></li>
+                        <li><span class="menu-placeholder" aria-disabled="true">Nyttige links</span></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <form class="site-search" role="search">
+            <button type="submit" aria-label="Søg"><img src="assets/julie/soeg.svg" alt=""></button>
+            <input type="search" name="q" aria-label="Søg på hjemmesiden" placeholder="Søg" required>
+        </form>
+    </div>
+</header>
+
+<main class="page-content">
+    <section id="soegeresultater" class="search-results" aria-labelledby="search-title" hidden>
+        <h2 id="search-title" tabindex="-1">Søgeresultater</h2>
+        <p id="search-status"></p>
+        <ul id="search-matches"></ul>
+    </section>
+
+    <div id="velkommen" class="home-view" data-view>
+        <section id="dmju-by-night" class="hero" data-search>
+            <img src="assets/julie/dmju-by-night.png" alt="Modeljernbane oplyst om aftenen">
+            <h1>Næste udstilling<br>– DMJU by night<br><time datetime="2026-12-13">13/12-26</time></h1>
+        </section>
+
+        <section id="om-dmju" class="about" data-search>
+            <div class="about-photo">
+                <img src="assets/julie/modeljernbane.png" alt="Modeltog og en jernbanebro">
+            </div>
+            <div>
+                <h2>Hvem er vi?</h2>
+                <p>Dansk Model Jernbane Union samler modeljernbaneentusiaster fra hele Danmark gennem fællesskab og en fælles passion for modeltog.</p>
+                <p>Unionen arrangerer hvert år den store udstilling “DMJU - By night”, hvor besøgende kan opleve imponerende modeljernbaner i forskellige størrelser, spændende aktiviteter og et stort udvalg af modeltog. Et samlingspunkt for både erfarne entusiaster og nysgerrige familier.</p>
+            </div>
+        </section>
+
+        <section id="udstillinger" class="events" aria-label="Kommende udstillinger">
+            <article id="modelbanedag" class="event" data-search>
+                <div class="event-photo event-photo-wide"><img src="assets/julie/modelbanedag.png" alt="Modelby med jernbanespor"></div>
+                <div class="event-copy">
+                    <time datetime="2026-12-18">18/12-26</time>
+                    <h3>Modelbanedag</h3>
+                    <p>Se klubbernes anlæg i drift, og få en snak med dem, der har bygget dem.</p>
+                </div>
+            </article>
+            <article id="sneland" class="event" data-search>
+                <div class="event-photo"><img src="assets/julie/sneland.png" alt="Modeljernbane i et vinterlandskab"></div>
+                <div class="event-copy">
+                    <time datetime="2026-12-23">23/12-26</time>
+                    <h3>DMJU Sneland</h3>
+                    <p>Oplev DMJU’s traditionelle vinterlandskab i fuld aktion.</p>
+                </div>
+            </article>
+            <article id="aabent-hus" class="event" data-search>
+                <div class="event-photo"><img src="assets/julie/aabent-hus-forside.png" alt="Besøgende ved en modeljernbaneudstilling"></div>
+                <div class="event-copy">
+                    <time datetime="2026-12-27">27/12-26</time>
+                    <h3>Åbent hus</h3>
+                    <p>Kom tæt på togene og se hvordan klubben bygger spor og landskaber.</p>
+                </div>
+            </article>
+        </section>
+
+    </div>
+
+    <section id="medlem" class="membership" data-view hidden data-search>
+        <h2>Medlem</h2>
+        <p class="membership-intro">I DMJU er der plads til alle. Alle med samme passion inde for modeltoge. I dag er der lidt over 180 klubber.</p>
+
+        <form id="member-form" class="member-form">
+            <label>Din klub<span aria-hidden="true">*</span><input name="klub" autocomplete="organization" required></label>
+            <label>Postnummer<span aria-hidden="true">*</span><input name="postnummer" inputmode="numeric" autocomplete="postal-code" required></label>
+            <label>Email<span aria-hidden="true">*</span><input type="email" name="email" autocomplete="email" required></label>
+            <label>Adresse<span aria-hidden="true">*</span><input name="adresse" autocomplete="street-address" required></label>
+            <label>Telefonnummer<span aria-hidden="true">*</span><input type="tel" name="telefon" autocomplete="tel" required></label>
+            <label>By<span aria-hidden="true">*</span><input name="by" autocomplete="address-level2" required></label>
+            <label>Formanden/kontaktperson<span aria-hidden="true">*</span><input name="kontaktperson" autocomplete="name" required></label>
+            <div class="member-actions">
+                <button type="submit">Tilmeld her</button>
+                <label class="newsletter"><input type="checkbox" name="nyhedsbrev"> Tilmeld dig vores ugentlige nyhedsbrev</label>
+                <p id="member-status" role="status"></p>
+            </div>
+        </form>
+        <div class="member-about">
+            <p>Dansk Model Jernbane Union har været en sammenslutning af modelbaneklubber i Danmark siden 1961, vi afholder udstillinger i Danmark, DMJU formål er at udbrede viden om hobbyen, samt at samle forhandler, klubber og privat personer.</p>
+            <img src="assets/julie/dmju-logo.png" alt="">
+        </div>
+    </section>
+
+
+    <section id="kommende-udstillinger" class="subpage exhibitions" data-view hidden data-search>
+        <h2>Kommende udstillinger</h2>
+        <p class="subpage-intro">Se modelbaner i drift og mød klubberne bag dem</p>
+        <div class="events exhibition-cards">
+            <article class="event">
+                <div class="event-photo event-photo-wide"><img src="assets/julie/modelbanedag.png" alt="Modelby med jernbanespor"></div>
+                <div class="event-copy">
+                    <time datetime="2026-12-18">18/12-26</time>
+                    <h3>Modelbanedag</h3>
+                    <p>Se klubbernes anlæg i drift, og få en snak med dem, der har bygget dem.</p>
+                    <a class="subpage-button" href="#kontakt">Praktisk info</a>
+                </div>
+            </article>
+            <article class="event">
+                <div class="event-photo"><img src="assets/julie/sneland.png" alt="Modeljernbane i et vinterlandskab"></div>
+                <div class="event-copy">
+                    <time datetime="2026-12-23">23/12-26</time>
+                    <h3>DMJU Sneland</h3>
+                    <p>Oplev DMJU’s traditionelle vinterlandskab i fuld aktion.</p>
+                    <a class="subpage-button" href="#kontakt">Praktisk info</a>
+                </div>
+            </article>
+            <article class="event">
+                <div class="event-photo"><img src="assets/julie/aabent-hus.png" alt="Besøgende ved en modeljernbaneudstilling"></div>
+                <div class="event-copy">
+                    <time datetime="2026-12-27">27/12-26</time>
+                    <h3>Åbent hus</h3>
+                    <p>Kom tæt på togene og se hvordan klubben bygger spor og landskaber.</p>
+                    <a class="subpage-button" href="#kontakt">Praktisk info</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="fotokonkurrence" class="subpage photo-contest" data-view hidden data-search>
+        <h2>Fotokonkurrencen 2025</h2>
+        <div class="subpage-intro">
+            <p>Deltag og vind gode gavekort til modeljernbanen.</p>
+            <p>I år er temaet: ”Under broen”</p>
+        </div>
+        <article class="photo-entry">
+            <img src="assets/julie/foto-1.png" alt="Modeltog ved en tunnelåbning" loading="lazy">
+            <div class="subpage-card">
+                <h3>Billede 1:</h3>
+                <p><strong>Foto taget af:</strong><br>Steen Svendsen</p>
+                <p><strong>Klub:</strong> Odense Model Jernbane Klub</p>
+                <a class="photo-button" href="assets/julie/foto-1.png">Se i fuld størrelse<span class="visually-hidden"> (billede 1)</span></a>
+            </div>
+        </article>
+        <article class="photo-entry">
+            <img src="assets/julie/foto-2.png" alt="Modeljernbanebro med en kran" loading="lazy">
+            <div class="subpage-card">
+                <h3>Billede 2:</h3>
+                <p><strong>Foto taget af:</strong><br>Henning Hansen</p>
+                <p><strong>Klub:</strong> Farum Model Jernbane Klub</p>
+                <a class="photo-button" href="assets/julie/foto-2.png">Se i fuld størrelse<span class="visually-hidden"> (billede 2)</span></a>
+            </div>
+        </article>
+        <article class="photo-entry">
+            <img src="assets/julie/foto-3.png" alt="Modelbanebro set fra siden" loading="lazy">
+            <div class="subpage-card">
+                <h3>Billede 3:</h3>
+                <p><strong>Foto taget af:</strong><br>Henning Hansen</p>
+                <p><strong>Klub:</strong> Farum Model Jernbane Klub</p>
+                <a class="photo-button" href="assets/julie/foto-3.png">Se i fuld størrelse<span class="visually-hidden"> (billede 3)</span></a>
+            </div>
+        </article>
+        <p class="contest-signature">DMJU Fotokonkurrence 2025</p>
+    </section>
+
+    <section id="nyheder" class="subpage news" data-view hidden data-search>
+        <h2>DMJU</h2>
+        <p class="subpage-intro">Nyheder fra DMJU og modeljernbaneklubberne</p>
+        <h3>Fremhævet nyhed</h3>
+        <article class="featured-story">
+            <img src="assets/julie/nyhed-modeltog.png" alt="Stand med blade og modeljernbaneudstyr" loading="lazy">
+            <div class="subpage-card">
+                <h4>En snak om modeltog</h4>
+                <p>Ved standen kan besøgende bladre i modeljernbaneblade og få en snak om modeltog, anlæg og klubliv.</p>
+            </div>
+        </article>
+        <h3>Seneste nyheder</h3>
+        <div class="news-grid">
+            <article id="nyhed-modelby" data-search>
+                <img src="assets/julie/nyhed-modelby.png" alt="Modelby med huse og skinner" loading="lazy">
+                <div class="subpage-card">
+                    <h4>En by fuld af små detaljer</h4>
+                    <p>Mellem husene, vejene og skinnerne er der masser at gå på opdagelse i. Kig godt efter de små scener langs banen.</p>
+                </div>
+            </article>
+            <article id="nyhed-hallen" data-search>
+                <img src="assets/julie/nyhed-hallen.png" alt="Modeljernbaneanlæg i en udstillingshal" loading="lazy">
+                <div class="subpage-card">
+                    <h4>Modelbaner fylder hallen</h4>
+                    <p>Fra lange godstog til små stationsbygninger. I hallen kan besøgende gå fra anlæg til anlæg og se, hvordan landskaber og spor er bygget op.</p>
+                </div>
+            </article>
+            <article id="nyhed-havebane" data-search>
+                <img src="assets/julie/nyhed-havebane.png" alt="Besøgende ved en havebane" loading="lazy">
+                <div class="subpage-card">
+                    <h4>Modeltog under åben himmel</h4>
+                    <p>På havebanen snor skinnerne sig forbi små bygninger og grønne bede. Her kan besøgende følge togene helt tæt på.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="hjaelpevognen" class="subpage help-page" data-view hidden data-search>
+        <h2>Hjælpevognen</h2>
+        <div class="help-intro">
+            <p>Opgørelsen for det sidste år er kommet, perioden løber fra sep. til sep. det udbetalt beløb i 26 kom op på 2508,09 kr, så det samle beløb på kontoen er nu oppe på 3922,38 kr.</p>
+            <p>DMJU har indgået en sponsoraftale med OK, så du kan støtte Dansk Model Jernbane Union, hver gang du tanker. Og vigtigst af alt, det koster dig ikke ekstra at støtte vores forening – OK betaler hele beløbet.</p>
+            <p>Du støtter vores forening med 5 øre/liter – uanset om du bestiller et OK Kort eller betaler med OK-appen. Når nye kunder har tanket 500 liter indenfor et år, får vores forening en ekstra bonus på 200 kr.</p>
+        </div>
+
+        <section class="help-card help-order">
+            <h3>Bestil dit OK kort</h3>
+            <p>Bestil et OK Kort på <span class="help-address">www.ok.dk/lokalsporten</span>. Hvis du vælger at tanke med OK-appen, så finder du den i App Store eller Google Play.</p>
+            <p>Har du allerede et OK Kort? Så ring til OK på 70 10 20 33 og fortæl dem, at du gerne vil støtte Dansk Model Jernbane Union nu. Og så sørger de for at ændre det.</p>
+        </section>
+        <img class="help-ok-image" src="assets/julie/ok-kort.png" alt="OK Kort og OK-appen" width="358" height="366" loading="lazy">
+
+        <section class="help-electricity">
+            <h3>Støt ekstra med OK El</h3>
+            <p>Har du et OK Kort kan du fordoble støtten til vores forening. Med el fra OK kan du støtte med 5 øre ekstra pr. liter, hver gang du tanker. Det er nemt og hurtigt at skifte elselskab.</p>
+        </section>
+        <img class="help-electricity-image" src="assets/julie/ok-el.png" alt="OK El og Dansk Model Jernbane Union" width="446" height="446" loading="lazy">
+        <section id="hjaelpevogn-kontakt" class="help-card help-contact">
+            <h3>Kontakt</h3>
+            <p>Bare ring til OK på <strong>70 10 20 33</strong>, så sørger de for det hele.</p>
+            <p>Har du spørgsmål, er du velkommen til at kontakte Willy Nielsen på <strong>22271777</strong> eller <strong>kasserer(@)dmju.dk.</strong></p>
+        </section>
+
+        <section class="help-explanation">
+            <h3>Hvordan virker det?</h3>
+            <p>DMJUs aftale med OK løber fra Oktober 2024 til Oktober 2025, hvor vi så vil vide hvor mange penge der er indløbet på vores konto, fra første Januar 2026 vil vores Hjælpevogn kunne uddele midler til klubber.</p>
+            <p>Hjælpevognen er en måde hvor man med et OK benzin kort eller app, kan støtte klubber under DMJU.<br>Alle støtte kroner som kommer fra OK eller andre sponsere vil gå til klubber, er en klub af en eller anden grund i nød, kan de søge om midler ved DMJU som vil ser på sagen. En gang om året vil man se hvor mange midler som der er i Hjælpevognens kasse, DMJU vil man vurdere hvor mange midler der kan udles til alle klubber under DMJU, alle klubber vil få tildelt det samme beløb.</p>
+            <p>Det er ikke alle medlemmer som har et OK kort, men som sikker gerne vil støtte Hjælpevognen, det kan nu gøres på en Mobilpay konto til samme formål, alle beløb om det er 5 kr. eller mere skal være velkommen, og vi siger tak på forhånd, har man spørgsmål til ting omkring Hjælpevognen så kontakt kassereren.</p>
+        </section>
+        <div class="help-divider" aria-hidden="true"></div>
+
+        <p class="help-payment">Mobilpay konto: #87710 eller brug QR koden.Husk på at ingen kontingenter til DMJU fra klubber, vil ikke gå til Hjælpevognen.</p>
+        <img class="help-qr" src="assets/julie/hjaelpevogn-qr.png" alt="MobilePay QR-kode" width="184" height="184" loading="lazy">
+
+        <section class="help-support">
+            <h3>Støtte</h3>
+            <p>Der er 2 muligheder for støtte:</p>
+            <ul>
+                <li>Støtte til nødlidende klubber</li>
+                <li>Støtte til andre klubber</li>
+            </ul>
+            <p class="help-criteria"><strong>Ad 1:</strong> Kommer en klub i økonomisk bekneb i forbindelse med f.eks. en vandskade, kan der ansøges om et engangstilskud (her kan det drøftes om der skal ansøges om et konkret beløb eller om der ydes tilskud efter en bedømmelse fra DMJU) alle ansøgninger vil blive drøfte på det først kommende bestyrelsesmøde i DMJU.</p>
+            <p class="help-application"><a href="#hjaelpevogn-kontakt">Ansøgning klik her.</a></p>
+            <p class="help-criteria"><strong>Ad 2:</strong> Her søges tilskud efter de gængse normer for sponsorater fra almennyttige fonde, dvs. at klubberne kan fremsende en ansøgning om støtte, som derefter tildeles efter afgørelse fra DMJU. Beløbets størrelse afgøres suverænt af DMJU og kan til enhver tid afvige fra det beløb, som måtte være angivet i ansøgningen.</p>
+        </section>
+        <div class="help-wagon"><img src="assets/julie/hjaelpevogn-ok.png" alt="OK-vogn med teksten Støtter DMJUs klubber" width="578" height="167" loading="lazy"></div>
+    </section>
+
+    <section id="om-foreningen" class="subpage history" data-view hidden data-search>
+        <h2>Historien bag DMJU</h2>
+        <p>Den 09. april 1961 blev Dansk Model Jernbane Union i dagligt tale kaldt DMJU, stiftet på en generalforsamling med det formål er at fremme samarbejdet mellem alle danske modeljernbaneklubber og at fremme interessen for modeljernbane hobbyen generelt. DMJU har siden vokset sig til i dag at repræsentere 105 klubber fordelt på alle størrelser og drift type og som samt hvert år afholder Danmarks største modeltogs udstilling.</p>
+        <p>Et tilbageblik om stiftelsen af dmju og morop</p>
+        <p>Poul Erik Clausen, der var næstformand i DMJK, fremsatte i 1950 på DMJKs generalforsamling, sammen med Poul Erik Harby, nogle ret vidtrækkende forslag hvoraf det ene gik ud på, at DMJK skulle søge kontakt med landets andre MJ klubber med henblik på dannelse af en fælles Union. Dette forslag kom ikke til realitets drøftelse på generalforsamlingen som følge af en heftig debat om andre emner, men Clausen opgav ingen lunde tanken om et nærmere samarbejde mellem klubberne</p>
+        <p>På DMJKs ekstraordinære generalforsamling den 8. maj 1950, blev Clausen valgt til formand for DMJK, en post som han varetog på forbilledlig vis indtil sin alt for tidlige død den 27. juli 1959, få dage efter afslutningen af den 1. MOROP-kongres i Danmark. Denne internationale sammenslutning af MJ-klubber (nu også af klubber fra andre jernbane interesserede) er faktisk en videreførelse af større sammenhæng af UNION tankerne fra 1950. Sådanne tanker gærede nemlig også i andre lande, hvilket gav sig udslag i, at der bliver afholdt internationale MJ konferencer i Rüdesheim i 1952 og i München 1953. Fra Dansk side deltog blandt andet Clausen og *James Steffensen i disse konferencer, da det var besluttet, at man ved næste konference  i Genua i eftersommeren 1954, ville  stifte en international sammenslutning, udsendte DMJK i juni 1954 en rundskrivelse til andre danske MJ klubber, hvori det foresloges, at de danske MJ klubber skulle tilslutte sig den internationale sammenslutning, idet DMJK indtil videre ville være villige til at fungere som sekretariat og mellemled. Syv af de 9 tilskrevne klubber accepterede forslaget, og ”Danske model jernbane klubber”. DMK kom herved til at stå som medstifter af MOROP. Reelt var det Clausen personligt, der indtil sin død fungerede som sekretariat og mellemled, idet hans talrige tjenesterejser bragte ham rundt i hele landet, hvilket gav ham gode muligheder for hyppig kontakt med provins-klubberne.  Samarbejdet mellem de danske MJ-klubber fortsatte på det beskrevne løse grundlag i hele 7 år, og først i 1961 blev Clausen og Harbys oprindelige unionstanke fra 1950 virkelig gjort ved stiftelsen af det, der i dag hedder Dansk Model jernbane Union, forkortet DMJU.</p>
+        <p>*James Steffensen var én af medstifterne af MOROP og deltog i mange år i MOROPs arbejde med udviklingen af NEM normerne.</p>
+        <p>James Steffensen  blev udnævnt til æresmedlem i MOROP. Ligeledes var han æresmedlem i DMJK indtil sin død i 1988.</p>
+        <p>Den hjemmeside du besøger lige nu er den primære kommunikations linie mellem DMJU, medlemsklubberne og offentligheden – det er her nyhederne først læses og kommende events offentliggøres, og det er her du finder alle praktiske oplysninger om modeljernbanehobbyen i Danmark og udlandet. Og det er også her du finder kontakt info til alle de mere end 105 modeljernbaneklubber der er medlem af DMJU.</p>
+        <p>DMJU er den officielle sammenslutning af modeljernbaneklubber i Danmark, og blev stiftet i 1961. DMJU’s formål er at fremme samarbejdet mellem alle danske modeljernbaneklubber og at fremme interessen for modeljernbane hobbyen generelt.</p>
+        <p>DMJU er medlem af den europæiske sammenslutning MOROP (Union Européenne des ModélistesFerroviaires et des Amis des Chemins de Fer)), der har hovedsæde i Bern i Schweiz, og deltager så aktivt som muligt i det internationale samarbejde. DMJU har for nylig taget initiativ til et tættere samarbejde mellem de nordiske lande, og forhandlinger om dette fortsætter i 2015.</p>
+        <p>I marts måned 1994 arrangerede DMJU for første gang modeljernbane udstilling i “DSB-Kursuscenter Østerport” i København. Siden er det blevet til en række udstillinger, der afholdes skiftevis øst og vest for Storebælt. De sidst afholdte har været i Køge (nu Taastrup) og Sydbank Arena (Kolding). Der arbejdes hele tiden på, at gøre udstillingerne bedre og bedre og vise dansk modeljernbane. Et af de faste indslag er en diorama konkurrence. Som inspiration inviteres gerne et udenlandsk anlæg til at deltage i udstillingen. Det er således den 29. DMJU udstilling der åbner næste gang i Vejle marts 2026. Du kan finde flere oplysninger under menu punktet ’udstilling’.</p>
+        <p>Da interessen i Danmark i udtalt grad er for at køre med modeller af danske tog, afholder DMJU en afstemning blandt medlemmerne om ”Årets model” for at fremme interessen for at producere til det danske marked. Der er flere kategorier, men alt handler om danske tog og dansk tilbehør. De vindende producenter får et flot diplom som tegn på æren.</p>
+        <p>Nye tiltag vil sikkert se dagens lys fremover, således at DMJU fortsat ses som en aktiv, nyttig og fornyende forening til fremme af danske modeljernbaneklubbers og entusiasters interesser.</p>
+        <img src="assets/julie/foreningen.png" alt="Fem personer foran en modeltogsudstilling" loading="lazy">
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="footer-columns">
+        <section id="kontakt" class="contact" data-search>
+            <h2>Kontakt:</h2>
+            <div>
+                <p>Email: Formand(@)dmju.dk</p>
+                <p>Telefonnummer: <a href="tel:+4525738905">25 73 89 05</a></p>
+            </div>
+        </section>
+        <section id="aabningstider" class="opening" data-search>
+            <h2>Åbent hus:</h2>
+            <div>
+                <p>Åbent hver tirsdag og torsdag</p>
+                <p>18 - 21</p>
+            </div>
+        </section>
+        <section class="sponsors">
+            <h2>Sponsorer:</h2>
+            <div class="sponsor-logos">
+                <img class="sponsor-ok" src="assets/julie/ok.png" alt="OK">
+                <div class="sponsor-hobby"><img src="assets/julie/hobbykaelderen.png" alt="Hobbykælderen"></div>
+                <img class="sponsor-heljan" src="assets/julie/heljan.png" alt="Heljan">
+            </div>
+        </section>
+    </div>
+    <div class="footer-socials">
+        <div class="footer-social-icon"><img src="assets/julie/facebook.svg" alt="Facebook"></div>
+        <div class="footer-social-icon"><span class="instagram-icon" role="img" aria-label="Instagram"></span></div>
+    </div>
+    <p class="copyright">Copyright © 2026 Dansk Model Jernbane Union | Powered by PHPStorm</p>
+</footer>
+</body>
+</html>
